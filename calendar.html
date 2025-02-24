@@ -6,18 +6,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calendar.css">
   <link rel="icon" type="image/png" href="./logo.png" />
 </head>
 
 <body class="bg-gray-900 text-gray-100">
-  <!--navbar!!!!-->
+  <!--navbar-->
   <nav class="bg-gray-800 shadow-lg no-particles">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between">
         <div class="flex items-center">
           <a href="./index.html">
-          <img class="h-12 w-auto" src="./logo.png" alt="Logo">
+            <img class="h-12 w-auto" src="./logo.png" alt="Logo">
           </a>
           <a href="./index.html">
             <span class="ml-4 text-3xl font-extrabold text-white tracking-wide gradient-text">
@@ -39,11 +39,11 @@
     <section class="bg-gray-800 rounded-lg shadow-md p-6">
       <h1 class="text-3xl font-bold text-center text-gray-100 mb-4">Calendar</h1>
       <p class="text-center text-gray-300 mb-6">View your scheduled events in the calendar below.</p>
-      <iframe class="center w-full border-0 rounded-lg" 
-              src="https://calendar.google.com/calendar/embed?src=c_664b3a7dc8049d654e29b55fe722169852bd87df83d18cef36a50f8dfa14dd1e%40group.calendar.google.com&ctz=America%2FChicago" 
+      <iframe id="calendarIframe" class="center w-full border-0 rounded-lg"
+              src="" 
               style="height: 600px;" 
               frameborder="0" 
-              scrolling="no">
+              scrolling="yes">
         Loading…
       </iframe>
     </section>

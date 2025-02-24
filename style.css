@@ -11,7 +11,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
   position: relative;
+}
+
+body {
+  pointer-events: none;
 }
 
 #particles-js {

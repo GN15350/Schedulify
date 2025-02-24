@@ -53,6 +53,30 @@
   <footer class="bg-gray-800 text-gray-400 text-center py-4">
     <p>🄯 2025 Schedulify. No rights reserved.</p>
   </footer>
-</body>
 
-</html>
+  
+  <script>
+    function setCalendarView() {
+      const calendarIframe = document.getElementById("calendarIframe");
+      const baseUrl = "https://calendar.google.com/calendar/embed?src=c_664b3a7dc8049d654e29b55fe722169852bd87df83d18cef36a50f8dfa14dd1e%40group.calendar.google.com&ctz=America/Chicago";
+      const isMobile = window.innerWidth <= 768;
+  
+      // Get the current mode from the iframe source
+      const currentSrc = calendarIframe.src;
+      const newSrc = isMobile ? baseUrl + "&mode=AGENDA" : baseUrl + "&mode=MONTH";
+  
+      // Only update if the mode actually changes
+      if (currentSrc !== newSrc) {
+        calendarIframe.src = newSrc;
+      }
+    }
+  
+    window.addEventListener("load", setCalendarView);
+    window.addEventListener("resize", () => {
+      clearTimeout(window.resizing);
+      window.resizing = setTimeout(setCalendarView, 200); // Add a delay to prevent rapid changes
+    });
+  </script>
+</body>
+</html>  
+  
